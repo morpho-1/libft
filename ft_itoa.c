@@ -45,7 +45,7 @@ static	int	count(int n)
 char	*ft_itoa(int n)
 {
 	int		len;
-	char	*p;
+	char		*p;
 
 	if (n <= -2147463648)
 		return (ft_strdup("-2147483648"));

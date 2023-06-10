@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aylemrab <aylemrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 22:39:29 by aylemrab          #+#    #+#             */
-/*   Updated: 2023/06/01 03:45:11 by aylemrab         ###   ########.fr       */
+/*   Created: 2022/11/21 15:46:50 by aylemrab          #+#    #+#             */
+/*   Updated: 2022/11/25 13:35:26 by aylemrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-size_t	ft_strlen(const char *str)
+int	ft_putptr(unsigned long nb)
 {
-	size_t	i;
+	int	len;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+	len = 0;
+	len += ft_putstr("0x");
+	len += ft_puthexa(nb, 'x');
+	return (len);
 }

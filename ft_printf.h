@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aylemrab <aylemrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 22:39:29 by aylemrab          #+#    #+#             */
-/*   Updated: 2023/06/01 03:45:11 by aylemrab         ###   ########.fr       */
+/*   Created: 2022/11/18 11:18:38 by aylemrab          #+#    #+#             */
+/*   Updated: 2023/06/08 11:31:52 by aylemrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
+# include <stdarg.h>
+# include <stdio.h>
+# include <unistd.h>
+# include <string.h>
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
+int     ft_printf(const char *format, ...);
+int     ft_putstr(char *s);
+int     ft_putnbr(int nb);
+int     ft_putchar(char c);
+int     ft_puthexa(unsigned long nb, char c);
+int     ft_putunbr(unsigned int nb);
+int     ft_putptr(unsigned long nb);
+
+#endif

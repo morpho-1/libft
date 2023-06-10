@@ -6,13 +6,13 @@
 /*   By: aylemrab <aylemrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 14:36:18 by aylemrab          #+#    #+#             */
-/*   Updated: 2022/11/13 21:19:10 by aylemrab         ###   ########.fr       */
+/*   Updated: 2023/06/01 02:15:17 by aylemrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*p;
 	char	*all;

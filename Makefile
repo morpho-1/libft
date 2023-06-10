@@ -6,7 +6,7 @@
 #    By: aylemrab <aylemrab@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/26 16:46:34 by aylemrab          #+#    #+#              #
-#    Updated: 2022/11/13 14:18:17 by aylemrab         ###   ########.fr        #
+#    Updated: 2023/06/01 04:33:10 by aylemrab         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,13 @@ SRCS = ft_split.c\
  	ft_strrchr.c\
 	ft_tolower.c\
 	ft_toupper.c\
-
+	ft_printf.c\
+	ft_putstr.c\
+	ft_putnbr.c\
+	ft_putchar.c\
+	ft_puthexa.c\
+	ft_putunbr.c\
+	ft_putptr.c
 
 OBJS = $(SRCS:.c=.o)
 

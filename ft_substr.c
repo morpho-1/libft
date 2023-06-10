@@ -6,7 +6,7 @@
 /*   By: aylemrab <aylemrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 15:17:12 by aylemrab          #+#    #+#             */
-/*   Updated: 2022/11/13 20:45:30 by aylemrab         ###   ########.fr       */
+/*   Updated: 2023/06/02 22:59:30 by aylemrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(p, s, len + 1);
 	return (p);
 }
-
-// int main()
-// {
-// 	char *str = "i just want this part #############";
-// 	size_t size = 22;
-// 	char *ret = ft_substr(str, 0, size);
-// 	printf("%s", ret);
-// }
-
-//  want this part ####

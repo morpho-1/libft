@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putunbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aylemrab <aylemrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 22:39:29 by aylemrab          #+#    #+#             */
-/*   Updated: 2023/06/01 03:45:11 by aylemrab         ###   ########.fr       */
+/*   Created: 2022/11/21 16:24:30 by aylemrab          #+#    #+#             */
+/*   Updated: 2022/11/21 17:34:07 by aylemrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-size_t	ft_strlen(const char *str)
+int	ft_putunbr(unsigned int nb)
 {
-	size_t	i;
+	int	len;
 
-	i = 0;
-	while (str[i] != '\0')
+	len = 0;
+	if (nb < 10)
+		len += ft_putchar(nb + '0');
+	else if (nb > 9)
 	{
-		i++;
+		len += ft_putunbr(nb / 10);
+		len += ft_putunbr(nb % 10);
 	}
-	return (i);
+	return (len);
 }

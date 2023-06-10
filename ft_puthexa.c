@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_puthexa.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aylemrab <aylemrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 22:39:29 by aylemrab          #+#    #+#             */
-/*   Updated: 2023/06/01 03:45:11 by aylemrab         ###   ########.fr       */
+/*   Created: 2022/11/21 15:19:31 by aylemrab          #+#    #+#             */
+/*   Updated: 2022/11/23 14:15:02 by aylemrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-size_t	ft_strlen(const char *str)
+int	ft_puthexa(unsigned long nb, char c)
 {
-	size_t	i;
+	int		len;
+	char	*str;
 
-	i = 0;
-	while (str[i] != '\0')
+	len = 0;
+	if (c == 'X')
+		str = "0123456789ABCDEF";
+	else
+		str = "0123456789abcdef";
+	if (nb < 16)
+		len += ft_putchar(str[nb]);
+	else
 	{
-		i++;
+		len += ft_puthexa(nb / 16, c);
+		len += ft_puthexa(nb % 16, c);
 	}
-	return (i);
+	return (len);
 }

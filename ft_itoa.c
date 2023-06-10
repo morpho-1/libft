@@ -6,7 +6,7 @@
 /*   By: aylemrab <aylemrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 16:11:56 by aylemrab          #+#    #+#             */
-/*   Updated: 2022/11/12 18:40:50 by aylemrab         ###   ########.fr       */
+/*   Updated: 2023/06/02 22:58:45 by aylemrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static	int	count(int n)
 char	*ft_itoa(int n)
 {
 	int		len;
-	char		*p;
+	char	*p;
 
 	if (n <= -2147463648)
 		return (ft_strdup("-2147483648"));

@@ -6,7 +6,7 @@
 /*   By: aylemrab <aylemrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 20:07:50 by aylemrab          #+#    #+#             */
-/*   Updated: 2022/11/14 11:36:58 by aylemrab         ###   ########.fr       */
+/*   Updated: 2023/06/03 01:57:25 by aylemrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,11 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int nb, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_bzero(void *s, size_t n);
+int		ft_putunbr(unsigned int nb);
+int		ft_puthexa(unsigned long nb, char c);
+int		ft_putstr(char *s);
+int		ft_putchar(char c);
+int		ft_putptr(unsigned long nb);
 size_t	ft_strlen(const char *str);
 char	*ft_strchr(const char *s, int c);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -46,9 +51,10 @@ void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(char *s1, char *s2);
 char	**ft_split(char const *s, char c);
 char	*ft_strrchr(const char *s, int c);
+int		ft_printf(const char *format, ...);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strdup(const char *s);
